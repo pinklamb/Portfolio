@@ -1,7 +1,8 @@
 
+
+
+//Get Example Products Load them onto html
 let productsHtml = '';
-
-
 products.forEach((product) => {
   productsHtml +=
     `<div class="product-container">
@@ -26,7 +27,7 @@ products.forEach((product) => {
             $${(product.priceCents / 100).toFixed(2)}
           </div>
 
-          <div class="product-quantity-container">
+          <div class="product-quantity-container js-quantity">
             <select>
               <option selected value="1">1</option>
               <option value="2">2</option>
@@ -48,13 +49,52 @@ products.forEach((product) => {
             Added
           </div>
 
-          <button class="add-to-cart-button button-primary">
+          <button class="add-to-cart-button button-primary  js-add-to-cart-button"
+          data-product-id = "${product.id}" 
+          >
             Add to Cart
           </button>
         </div>
   `;
-
-
 });
 
+//Populate Products
 document.querySelector('.js-products-grid').innerHTML = productsHtml;
+
+
+
+
+//Functions
+
+
+
+//Add to Cart 
+
+document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
+  button.addEventListener('click', () => {
+    const productId = button.dataset.productId;
+    
+    let matchingItem;
+
+    cart.forEach((item) => {
+      if (productId === item.productId) {
+        matchingItem = item;
+      }
+    });
+
+      if (matchingItem) {
+        matchingItem.quantity += 1
+      } else {
+        cart.push({
+          productId,
+          quantity: 1
+        });
+      }
+      console.log(cart);
+  });
+});
+
+
+
+
+
