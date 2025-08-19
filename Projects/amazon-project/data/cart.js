@@ -81,20 +81,6 @@ export function updateDeliveryOption(productId, deliveryOptionsId){
 }
 
 
-export function getQuantity(cart){
-  itemTotal = 0;
-  //loop through cart 
-
-  // add each quantity of item in cart
-
-  //return total item quantity 
-  cart.forEach((cartItem) =>  {
-    itemTotal += cartItem.quantity
-  });
-  return itemTotal;
-  
-}
-
 
 
 
