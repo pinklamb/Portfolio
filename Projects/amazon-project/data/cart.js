@@ -1,9 +1,7 @@
 
 
-
-
 export let cart = 
-JSON.parse(localStorage.getItem('cart'));
+ JSON.parse(localStorage.getItem('cart'));
 
 // gives default value if no item in storage 
 if (!cart){
@@ -78,3 +76,23 @@ export function updateDeliveryOption(productId, deliveryOptionsId){
 
   savetoStorage();
 }
+
+
+export function getQuantity(cart){
+  itemTotal = 0;
+  //loop through cart 
+
+  // add each quantity of item in cart
+
+  //return total item quantity 
+  cart.forEach((cartItem) =>  {
+    itemTotal += cartItem.quantity
+  });
+  return itemTotal;
+  
+}
+
+
+
+
+
