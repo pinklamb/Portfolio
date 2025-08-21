@@ -1,4 +1,4 @@
-
+import { formatCurrency } from "../scripts/utils/money.js";
 
 
 export function getProduct(productId){
@@ -13,8 +13,45 @@ export function getProduct(productId){
   return matchingProduct;
 }
 
+class Product {
+
+  constructor(productDetails) {
+    this.id = productDetails.id
+    this.image = productDetails.image
+    this.name = productDetails.name
+    this.rating = productDetails.rating
+    this.priceCents = productDetails.priceCents
+  }
+
+  getStarsURL() {
+   return `images/ratings/rating-${this.rating.stars * 10}.png`;
+  }
+
+  extraInfoHTML() {
+    return '';
+  }
+
+  getPrice() {
+    return `$${formatCurrency(this.priceCents)}`
+  }
+}
 
 
+class Clothing extends Product {
+  
+  constructor(productDetails){
+    super(productDetails);
+    this.sizeChartLink = productDetails.sizeChartLink;
+  }
+
+
+  extraInfoHTML () {
+    return `
+    <a href = "${this.sizeChartLink}" target = "_blank"> Size Chart </a>
+    
+    `;
+  }
+}
 
 
 export const products = [
@@ -676,4 +713,11 @@ export const products = [
       "mens"
     ]
   }
-];
+].map((productDetails) => {
+
+  if (productDetails.type === 'clothing') {
+    return new Clothing(productDetails);
+  }
+  return new Product(productDetails);
+});
+
