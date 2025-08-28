@@ -84,7 +84,6 @@ export function loadCart(productGrid) {
   const xhr = new XMLHttpRequest();
 
   xhr.addEventListener('load', () => {
-    console.log(xhr.response);
     productGrid();
   });
 
