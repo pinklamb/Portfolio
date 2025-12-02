@@ -1,9 +1,7 @@
 {
   "devDependencies": {
     "jasmine": "^5.9.0",
-    "nodemon": "^3.1.10",
-    "build": "npm run build-python",
-    "build-python": "python main.py"
+    "nodemon": "^3.1.10"
   },
   "scripts": {
     "start": "node index.js",
