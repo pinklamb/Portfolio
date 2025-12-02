@@ -5,7 +5,8 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build-python": "python main.py"
   },
   "name": "my-portfolio",
   "description": "My portfolio source code, and all project code.",
