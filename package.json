@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
+    "dist": "mkdir -p dist && cp -R node_modules src main.py dist",
     "build-python": "python main.py",
     "build": "npm run build-python"
   },
