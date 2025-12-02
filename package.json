@@ -2,12 +2,14 @@
   "devDependencies": {
     "jasmine": "^5.9.0",
     "nodemon": "^3.1.10",
-    "build": "python main.py"
+    "build": "npm run build-python",
+    "build-python": "python main.py"
   },
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build": "python main.py"
+    "build-python": "python main.py",
+    "build": "npm run build-python"
   },
   "name": "my-portfolio",
   "description": "My portfolio source code, and all project code.",
