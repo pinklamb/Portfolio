@@ -1,17 +1,16 @@
 {
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "jasmine": "^5.9.0",
     "nodemon": "^3.1.10"
   },
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "build": "copyfiles -u 1 public/**/* dist/"
   },
   "name": "my-portfolio",
   "description": "My portfolio source code, and all project code.",
   "version": "1.0.0",
-  "main": "index.js",
-  "type":"module",
+  "type": "module",
   "dependencies": {
     "ansi-regex": "^6.2.0",
     "ansi-styles": "^6.2.1",
@@ -29,7 +28,6 @@
     "debug": "^4.4.1",
     "eastasianwidth": "^0.2.0",
     "emoji-regex": "^9.2.2",
-    "express": "^5.2.1",
     "fill-range": "^7.1.1",
     "foreground-child": "^3.3.1",
     "glob": "^10.4.5",
@@ -75,5 +73,4 @@
   "keywords": [],
   "author": "",
   "license": "ISC"
-  
 }
