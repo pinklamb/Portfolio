@@ -1,4 +1,4 @@
-// get computer input 
+
 function getCompMove(){ 
   const randomNum = Math.random();
   let computerMove;
@@ -14,7 +14,7 @@ function getCompMove(){
 
 }
 
-document.querySelector('.js-rock-button').addEventListener('click',() => {
+document.querySelector('.js-rock-button').addEventListener('click', () => {
   playGame('Rock');
 })
 
@@ -27,7 +27,7 @@ document.querySelector('.js-scissors-button').addEventListener('click', () => {
   playGame('Scissors')
 })
 
-//getting score from storage and setting default score if one is not in stored
+
 let score = JSON.parse(localStorage.getItem('score')) ||  {
     wins: 0,
     losses: 0,
@@ -40,11 +40,6 @@ function updateScoreElem(){
   document.querySelector('.js-score')
     .innerHTML=  `Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`;
 }
-
-
-//autoplay feature 
-
-
 
 
 let isAutoPlaying = false;
@@ -64,14 +59,6 @@ function autoPlay(){
     buttonElement.innerText = 'Autoplay'
   }
 }
-
-
-
-
-
-
-
-//Comparing Computer Input vs Player Input
 
 function playGame(playerMove){
 
@@ -106,7 +93,7 @@ function playGame(playerMove){
     }
   }
 
-  //updating score based on results
+ 
   if (result === 'You won.'){
     score.wins += 1;
   } else if (result === 'You lost.') {
@@ -115,7 +102,6 @@ function playGame(playerMove){
     score.ties += 1;
   }
 
-  //storing the score results
   localStorage.setItem('score', JSON.stringify(score));
 
   updateScoreElem();
