@@ -3,8 +3,6 @@
 
 todoList = [];
 
-
-
 function addtoList(){
   const inputElement = document.querySelector('.js-name-input');
 

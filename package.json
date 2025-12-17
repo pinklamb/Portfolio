@@ -5,7 +5,8 @@
     "nodemon": "^3.1.10"
   },
   "scripts": {
-    "build": "copyfiles -u 1 public/**/* dist/"
+    "build": "copyfiles -u 1 public/**/* dist/",
+    "start": "node server.js"
   },
   "name": "my-portfolio",
   "description": "My portfolio source code, and all project code.",
@@ -28,6 +29,7 @@
     "debug": "^4.4.1",
     "eastasianwidth": "^0.2.0",
     "emoji-regex": "^9.2.2",
+    "express": "^5.2.1",
     "fill-range": "^7.1.1",
     "foreground-child": "^3.3.1",
     "glob": "^10.4.5",
@@ -72,5 +74,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "main": "server.js"
 }
