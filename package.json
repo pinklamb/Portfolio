@@ -5,8 +5,8 @@
     "nodemon": "^3.1.10"
   },
   "scripts": {
-    "build": "npm run build",
-    "start": "node server.js"
+    "build": "copyfiles -u 1 \"public/**/*\" dist",
+    "start": "npm run build"
   },
   "name": "my-portfolio",
   "description": "My portfolio source code, and all project code.",
