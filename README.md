@@ -1,2 +1,3 @@
 # Portfolio
-My portfolio source code, and all project code. 
+My portfolio source code.
+
