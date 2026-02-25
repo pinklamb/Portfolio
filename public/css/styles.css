@@ -240,24 +240,35 @@ html {
   justify-content: center;
   min-height: 80vh;
   padding: 60px 10%;
-  color: #fff; 
+  color: #e4e4e4; 
   text-align: center; 
 }
 
 
 #projects h2,
 #about h2 {
-  font-size: 2rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem; 
   text-align: center;
 }
 
 
-.project-details,
 .about-me {
+  display: flex;
+  width: 100%;
+  font-size: 1.5rem;
+  margin: 0 auto 2rem auto;
+  box-sizing: border-box; 
+  border: 1px solid rgb(215, 75, 131);
+  border-radius: 30px;
+  padding: 40px;
+  
+}
+
+.project-details{
   max-width: 800px; 
   line-height: 1.7;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin: 0 auto 2rem auto;
 }
 
@@ -284,16 +295,6 @@ html {
 
 
 
-.flashing-logo{
-  position: absolute;
-  top: -24px;
-  left: 10px;
-  z-index: 900;
-}
-.flashing-logo img{
-  width: 170px;
-  height: auto;
-}
 
 
 
@@ -315,21 +316,33 @@ html {
 
 .intro::after {   
   bottom: 15px;
-  right: -30px;
+  right: -20px;
   border-left: none;
   border-top: none;
 }
 
 .project-timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 30px; 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  
+  gap: 20px; 
 }
+
 
 .project-card h3 {
   margin-top: 0;
   font-size: larger;
 }
+
+
+.project-card{
+   box-sizing: border-box; /* Ensures border is inside the element's width */
+    border: 1px solid rgb(215, 75, 131);
+    border-radius: 60px;
+    padding: 40px;
+    text-align: center;
+   
+}
+
 
 
 
@@ -338,7 +351,9 @@ a{
   color:#e2aac6 ;
 }
 
-
+.section-title{
+  color: #FF2D95;
+}
 
 
 

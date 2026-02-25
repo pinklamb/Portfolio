@@ -1,33 +1,25 @@
-.todo-grid, 
-.todo-input-grid
+.task-input-grid
 {
   display: grid;
   grid-template-columns: 200px 150px 100px;
   column-gap: 12px;
   row-gap: 16px;
   align-items: center;
-}
-
-body{
-  font-family: Arial;
-}
-
-.todo-input-grid{
   margin-bottom:16px;
-  align-items: stretch;
 }
 
-.name-input,
-.js-date-input
+
+.task-input
 {
   font-size: 15px;
   padding: 10px;
+  align-items: stretch;
 
 }
 
 
-.add-todo-button{
-  background-color: green;
+.add-todo-button {
+  background-color: rgb(87, 87, 173);
   border: none;
   color: white;
   font-size: 16px;
@@ -44,3 +36,7 @@ body{
   padding-bottom: 10px;
 }
 
+
+
+
+  
